@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>13.06.23</title>
+    </head>
+    <body>
+        <p>Table</p>
+        <p>Caption - Table header</p>
+        <p>tr - Table Row</p>
+        <p>td - Table Data</p>
+        <p>th - Table header</p>
+        <p>Border can be created with HTML and CSS also</p>
+        <table border="black">
+            <caption>Family List</caption>
+            <thead>
+                <tr>
+                    <th colspan="">S.No.</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="2">Keerthu</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Swarna</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Selvi</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Kutty</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>For sectioning tables:</b></p>
+        <p>thead - To wrap table header</p>
+        <p>tbody - To wrap table body</p>
+        <p>tfoot - To wrap table footer</p>
+        <hr>
+        <p>colspan and rowspan are used to create cells which span over multiple rows or columns (Like merging cells)</p>
+        <table border="black">
+            <caption>Food Menu</caption>
+            <tr>
+                <th rowspan="2">Item</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+            <tr>
+                <td>Frooti</td>
+                <td>10</td>
+                <td>0.14</td>
+            </tr>
+        </table>
+        <table border="black">
+            <caption>Practice Table</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="2">Average</th>
+                    <th rowspan="2">Red Eyes</th>
+                </tr>
+                <tr>
+                    <th>Height</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>        
+                <tr>
+                    <td>Male</td>
+                    <td>1.9</td>
+                    <td>0.003</td>
+                    <td>40%</td>
+                </tr>
+                <tr>
+                    <td>Female</td>
+                    <td>1.7</td>
+                    <td>0.002</td>
+                    <td>43%</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <hr>
+        <p>Form Tag</p>
+        <p>Action attribute is used to define what action need to be performed when a form is submitted or where the form data should be sent</p>
+        <p>Input Element - Used to create form controls, there are multiple types of inputs using type attribute</p>
+        <p>Popular types - text, password, number, time, color</p>
+        <p>Label element for captioning</p>
+        <p>In input element, id attribute should be unique</p>
+        <p>for attribute and id attribute should be the same</p>
+        <form action="/action">
+            <div>
+                <label for="username">
+                    Enter username:
+                    <input type="text" id="username" placeholder="Enter Name">
+                </label>
+            </div>
+            <div>
+                <label for="password">Enter password:</label>
+                <input type="password" placeholder="Enter Password" id="password">
+            </div>
+            <div>
+                <label for="age">Enter age:</label>
+                <input type="number" placeholder="Enter Age" id="age">
+            </div>
+            <br>
+            <input type="time">
+            <br>
+            <input type="color">
+            <br>
+            <button>Submit</button>
+        </form>
+        <button type="button">button</button>
+        <button type="menu">menu</button>
+        <button type="reset">reset</button>
+        <button type="submit">submit</button>
+        <br>
+        <p>Creating button using input (Not advisable)</p>
+        <form action="">
+            <input type="submit" value="submit"> <!--For submitting-->
+            <input type="button" value="button"> <!--Just a button-->
+        </form>
+        <p>Name attribute - Name of the form control. Submitted in the for as name/value pair. Used for referring in the database</p>
+        <form action="/server">
+            <input type="text" id="username" name="username" placeholder="Enter name">
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+        <form action="https://www.youtube.com/results">
+            <input type="text" name="search_query" placeholder="Search Youtube">
+            <button>Search</button>
+        </form>
+        <hr>
+        <form action="https://www.google.com/search">
+            <input type="text" name="q" placeholder="Google Search">
+            <button>Search</button>
+        </form>
+        <hr>
+        <form action="">
+            <input type="checkbox" name="male" id="male" checked>
+            <label for="male">Male</label>
+            <input type="checkbox" name="female" id="female">
+            <label for="female">Female</label>
+        </form>
+        <hr>
+        <form action="">
+            <fieldset>
+                <legend>Character Name:</legend>
+                <input type="radio" id="huey" name="drone" value="huey" checked>
+                <label for="huey">Huey</label>
+
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <label for="dewey">Dewey</label>
+            </fieldset>
+        </form>
+        <hr>
+        <select name="pets" id="pet-select">
+            <option value="">--Please choose an option--</option>
+            <option value="dog" selected>Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select>
+        <hr>
+            <div>
+            <input type="range" id="volume" name="volume"
+                   min="0" max="11">
+            <label for="volume">Volume</label>
+            </div>
+          
+            <div>
+            <input type="range" id="cowbell" name="cowbell" 
+                   min="0" max="100" value="90" step="10">
+            <label for="cowbell">Cowbell</label>
+            </div>
+        <hr>
+        <label for="story">Tell us your story:</label>
+
+        <textarea id="story" name="story" rows="5" cols="33" placeholder="Write your feedback here"></textarea>
+        <hr>
+        <hr>
+        <h3>Registration Form</h3>
+        <form action="/action">
+            <input type="text" name="first" id="first" placeholder="First Name">
+            <input type="text" name="last" id="last" placeholder="Last Name">
+            <br>
+            <label for="gender">Please select gender:</label>
+            <select name="gender" id="gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+            <label for="agree">Do you agree to all terms of service:</label>
+            <input type="checkbox" name="agree" id="agree" checked>
+            <label for="agree">Yes, I agree</label>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
